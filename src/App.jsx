@@ -39,9 +39,18 @@ function App() {
         </div>
 
         <div className='contenedorcardfondo'>
-          <div className='botonflechaizq' ></div>
+
+          <div className='botonflechaizq' >
+            <div className='triangulo'></div>
+          </div>
+
           <img src={cardfondo} id='cardfondo'></img>
-          <div className='botonflechader' ></div>
+
+          <div className='botonflechader' >
+            <div className='trianguloder'></div>
+
+          </div>
+
         </div>
 
   
