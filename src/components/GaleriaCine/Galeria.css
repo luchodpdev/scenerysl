@@ -1,0 +1,291 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.imagen-principal {
+  width: 200px;
+  cursor: pointer;
+}
+
+.titulocard {
+  font-size: 2vw;
+  margin-left: 0.2rem;
+}
+
+.parrafocard {
+  font-size: 1vw;
+  margin-left: 0.2rem;
+  font-weight:500;
+}
+
+.galeria {
+  width: 0px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria.abierta {
+  max-height: 100vh; /* o lo que necesites para que quepan tus imágenes */
+  opacity: 1;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.galeria2 {
+  width: 0px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria2.abierta {
+  max-height: 100vh; /* o lo que necesites para que quepan tus imágenes */
+  opacity: 1;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.galeria3 {
+  width: 0px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria3.abierta {
+  max-height: 100vh; /* o lo que necesites para que quepan tus imágenes */
+  opacity: 1;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.galeria4 {
+  width: 0px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria4.abierta {
+  max-height: 100vh; /* o lo que necesites para que quepan tus imágenes */
+  opacity: 1;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.galeria5 {
+  width: 0px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria5.abierta {
+  max-height: 100vh; /* o lo que necesites para que quepan tus imágenes */
+  opacity: 1;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.galeria6 {
+  width: 0px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria6.abierta {
+  max-height: 100vh; /* o lo que necesites para que quepan tus imágenes */
+  opacity: 1;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.galeria7 {
+  width: 0px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria7.abierta {
+  max-height: 100vh; /* o lo que necesites para que quepan tus imágenes */
+  opacity: 1;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.miniatura {
+  width: 15vw;
+  height: 11vw;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: 0.2s ease;
+  opacity: 0;
+}
+
+.miniatura:hover {
+    filter: sepia(1.1);
+
+}
+
+.carddiseño {
+  margin-left: 3vw;
+  max-width: 15vw;
+
+  
+}
+
+
+.contenedorcards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px
+}
+
+.fotocard {
+  margin-top: 4vw;
+  width: 15vw;
+  height: 12vw;
+  border-radius: 10px;
+  transition: 0.1s ease-in-out;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.fotocard:hover {
+  scale: 1.05;
+  filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5)) brightness(1.1);
+  animation: crecerlento 3s ease forwards;
+  
+}
+
+@keyframes crecerlento {
+  100% {transform: translateY(-2vw);}
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: aparecerfondonegro 0.3s ease forwards;
+}
+
+.imagen-ampliada {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  animation: agrandarfoto 0.3s ease forwards;
+}
+
+@keyframes agrandarfoto {
+  0% {opacity: 0; scale: 0.95;}
+}
+
+@keyframes aparecerfondonegro {
+  0% {opacity: 0;}
+}
+
+.contenedorcard.activa .titulocard,
+.contenedorcard.activa .parrafocard {
+  color: white;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  transition: 0.2s ease;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.galeria.abierta .miniatura {
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.galeria.abierta .miniatura:nth-child(1) { animation-delay: 0ms; }
+.galeria.abierta .miniatura:nth-child(2) { animation-delay: 100ms; }
+.galeria.abierta .miniatura:nth-child(3) { animation-delay: 200ms; }
+.galeria.abierta .miniatura:nth-child(4) { animation-delay: 300ms; }
+.galeria.abierta .miniatura:nth-child(5) { animation-delay: 400ms; }
+.galeria.abierta .miniatura:nth-child(6) { animation-delay: 500ms; }
+.galeria.abierta .miniatura:nth-child(7) { animation-delay: 600ms; }
+.galeria.abierta .miniatura:nth-child(8) { animation-delay: 700ms; }
+.galeria.abierta .miniatura:nth-child(9) { animation-delay: 800ms; }
+.galeria.abierta .miniatura:nth-child(10) { animation-delay: 900ms; }
+.galeria.abierta .miniatura:nth-child(11) { animation-delay: 1000ms; }
+.galeria.abierta .miniatura:nth-child(12) { animation-delay: 1100ms; }
+.galeria.abierta .miniatura:nth-child(13) { animation-delay: 1200ms; }
+.galeria.abierta .miniatura:nth-child(14) { animation-delay: 1300ms; }
+.galeria.abierta .miniatura:nth-child(15) { animation-delay: 1400ms; }
+.galeria.abierta .miniatura:nth-child(16) { animation-delay: 1500ms; }
+.galeria.abierta .miniatura:nth-child(17) { animation-delay: 1600ms; }
+.galeria.abierta .miniatura:nth-child(18) { animation-delay: 1700ms; }
+.galeria.abierta .miniatura:nth-child(19) { animation-delay: 1800ms; }
+.galeria.abierta .miniatura:nth-child(20) { animation-delay: 1900ms; }
+.galeria.abierta .miniatura:nth-child(21) { animation-delay: 2000ms; }
+.galeria.abierta .miniatura:nth-child(22) { animation-delay: 2100ms; }
+.galeria.abierta .miniatura:nth-child(23) { animation-delay: 2200ms; }
+.galeria.abierta .miniatura:nth-child(24) { animation-delay: 2300ms; }
+.galeria.abierta .miniatura:nth-child(25) { animation-delay: 2400ms; }

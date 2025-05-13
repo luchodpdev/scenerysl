@@ -1,0 +1,473 @@
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  display: flex;
+  background-color: antiquewhite;
+}
+
+.contlogonav {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  animation: aparecersombras 2s 1s ease forwards;
+  pointer-events: none;
+}
+
+.sombrasuperior {
+  position: fixed;
+  width: 100vw;
+  height: 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  opacity: 0;
+  background: linear-gradient(to top, #00000000, #0000007e);
+  animation: aparecersombras 2s 1s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes aparecersombras {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8vw;
+  left: 15px;
+  width: 10px;
+  display: flex;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 100%;
+  opacity: 0;
+  filter: drop-shadow(4px 6px 12px rgba(0, 0, 0, 0.5));
+  animation: aparecerderecha1 0.3s 5s ease forwards;
+  transition: 0.2s ease;
+    pointer-events: pointer;
+
+  
+
+  :hover {
+    scale: 1.15;
+  }
+
+}
+
+
+@keyframes aparecerderecha1 {
+  0% {transform: translateX(20vh);
+  opacity: 0;}
+  100% {transform: translateX(0vh);
+  opacity: 0.8;}
+}
+
+.logomenu {
+  width: 4vw;
+  height: 4vw;   
+  transition: 0.5s ease-in-out;
+  animation: latirmenu 2s ease alternate infinite, aparecerderecha 0.3s 5s ease forwards;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 1px;
+  opacity: 0;
+    pointer-events: pointer;
+
+
+  :hover {
+    scale: 1.5
+  }
+}
+
+@keyframes aparecerderecha {
+  0% {transform: translateX(20vh);
+  opacity: 0;}
+  100% {transform: translateX(0vh);
+  opacity: 1;}
+}
+
+@keyframes latirmenu {
+  0%{background-color:rgba(250, 235, 215, 0.548);}
+  100% {background-color:rgb(255, 255, 255) ;}
+}
+
+
+.logocamara {
+  width: 12vw;
+  margin-left: 20px;
+  filter: drop-shadow(0,0,0,1);
+  opacity: 0;
+  animation: aparecerizq 0.3s 4.5s ease forwards,latir 4s 4s ease-in-out alternate infinite; 
+}
+
+@keyframes aparecerizq {
+  0% {transform: translateX(-20vh);
+  opacity: 0;}
+  100% {transform: translateX(0vh);
+  opacity: 1;}
+}
+
+
+@keyframes latir {
+  0% {transform: scale(1.0);}
+  100% {transform: scale(1.05);}
+}
+
+.imagenfondo {
+  width: 100vw;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  opacity: 0.8;
+  animation: fondoimagen 3s ease forwards;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+
+}
+
+@keyframes fondoimagen {
+  0% {opacity:0;
+    scale: 1.02;}
+  100% {}
+} 
+
+.fondonombre {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  top: 25vh;
+  color: rgb(22, 21, 29);
+  text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF;
+  z-index: 4;
+  position: absolute;
+  opacity: 0;
+  animation: lateral 2s 1s cubic-bezier(0.25, 1, 0.25, 1) forwards, subir 0.5s 4s ease forwards;
+  
+}
+
+.parrafofondo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:absolute;
+  top: 60vh;
+  color: antiquewhite;
+  text-shadow: -1px -1px 0 #000000a1, 1px -1px 0 #000000a2, -1px 1px 0 #00000093, 1px 1px 0 #0000008e;
+  font-size: 2.6vw;
+  font-weight: bold;
+  opacity: 0.8;
+  z-index: 5;
+  opacity: 0;
+  animation: parrafosubir 3s 4.5s ease forwards;
+}
+
+.contenedorcardfondo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#cardfondo {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  z-index: 5;
+  top: 120vh;
+  border-radius: 15px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  transition: 0.3s ease-in-out;
+
+
+}
+
+#cardfondo:hover {
+      scale: 1.02;
+      filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.534));
+
+  }
+
+.botonflechaizq {
+  position: absolute;
+  top: 145vh;
+  left: 15vw;
+  background-color: #000000cc;
+  border-radius: 100%;
+  width: 6vw;
+  height: 6vw;
+  z-index: 7;
+  transition: 0.2s;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+
+}
+
+.botonflechaizq:hover {
+    animation: pinpong 1s linear infinite;
+    background-color: #000000;
+    filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.5));
+
+
+
+  }
+
+@keyframes pinpong {
+  0% {}
+  25% { transform: translateX(1vw); }
+  50% {transform: translateX(0vw);}
+  75% {transform: translateX(-1vw);}
+}
+
+.botonflechader {
+  position: absolute;
+  top: 145vh;
+  right: 15vw;
+  border-radius: 100%;
+  background-color: #000000cc;
+  width: 6vw;
+  height: 6vw;
+  z-index: 7;
+  transition: 0.2s;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+
+}
+
+.botonflechader:hover {
+    animation: pinpong 1s linear infinite;
+    background-color: #000000;
+    filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.5));
+
+
+
+  }
+
+@keyframes parrafosubir {
+  0% {
+    opacity: 0;
+    transform: translateY(15vh);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lateral {
+  0% {opacity:0;
+    transform: translateX(-20vh);
+        opacity: 0;}
+  100% {transform: translateX(0vh);
+  opacity: 0.85;};
+}
+
+@keyframes subir {
+  0% {}
+  100% {transform:scale(0.7) translateY(-15vh);
+  color: rgba(250, 235, 215, 0.76);}
+}
+
+.fondoquienes {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 150vh;
+  background-color: antiquewhite;
+
+}
+
+.contenidofondos {
+  width: 40vw;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.tituloquienes {
+  font-size: 3vw;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+
+}
+
+.parrafoquienes {
+  font-size: 2vw;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+
+}
+
+.fotoquienes {
+  width: 28vw;
+  border-radius: 15px;
+  margin-right: 10vw;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+
+
+}
+
+.carddiseño {
+  margin-left: 3vw;
+  max-width: 15vw;
+
+  
+}
+
+#fotocard {
+  margin-top: 4vw;
+  width: 15vw;
+  border-radius: 10px;
+  transition: 0.1s ease-in-out;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+
+
+
+}
+
+#fotocard:hover {
+  scale: 1.05;
+  filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5)) brightness(1.1);
+  animation: crecerlento 3s ease alternate;
+  
+}
+
+@keyframes crecerlento {
+  100% {transform: translateY(-2vw);}
+}
+
+.cardscroll {
+  background: linear-gradient(to top, #00000000, #00000048, #00000000);
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y:visible;
+  scrollbar-width: none;
+
+  margin-bottom: 2vw;
+}
+
+.fondoporque {
+  width: 100vw;
+
+}
+
+.imagenfondoporque {
+  width: 100vw;
+}
+
+.mascositas {
+  position: sticky;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  background-color: antiquewhite;
+
+}
+
+#mascositas {
+  font-size: 5vw;
+  text-align: center;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  margin-top: 0rem;
+}
+
+#fondomascositas {
+  position: sticky;
+}
+
+.fondologocamara {
+      filter: drop-shadow(4px 6px 12px rgba(0, 0, 0, 0.5));
+      border-radius: 100%;
+      transition: 0.3s ease-in-out; 
+           
+      :hover {
+        transform: scale(1.2)
+      }
+
+}
+
+.titulo {
+        filter: drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.5));
+        transition: 0.5s ease-out;
+        :hover {
+              transform: scale(0.7);
+
+        }
+}
+
+.fondo {
+  height: 200vh;
+}
+
+footer {
+  background-color: antiquewhite;
+  margin-top: 4vh;
+  width: 100%;
+  height: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infofooter {
+  display: flex;
+  gap: 2vw
+}
+
+#parrafofooter {
+  bottom: 2vh;
+}
+
+.logoredes {
+  width: 5vw;
+  transition: 0.1s ease;
+}
+
+.logoredes:hover {
+  transform: translateY(-0.5rem);
+}
+
+.logoredes2 {
+  width: 2.7vw;
+  transition: 0.1s ease;
+}
+
+.logoredes2:hover {
+  transform: translateY(-0.5rem);
+}
+
+.contenedorlogos {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5vw;
+  align-items: center;
+}
+
+.sombrainferior {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 5vw;
+  z-index: 7;
+  opacity: 0;
+  background: linear-gradient(to bottom, #00000000, #0000007e);
+  animation: aparecersombras 2s 1s ease forwards;
+  pointer-events: none;
+}
