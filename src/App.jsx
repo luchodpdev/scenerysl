@@ -4,7 +4,7 @@ import Fondo from './components/Fondo'
 import './App.css'
 import Fondoquienes from './components/Fondoquienes'
 import Fotoquienes from './components/Fotoquienes'
-import Carddiseño from './components/Carddiseño'
+// import Carddiseño from './components/Carddiseño'
 /*import Fondoporque from './components/Fondoporque'*/
 import cardfondo from './images/yate4.jpg'
 import LogoIg from './components/LogoIg'
