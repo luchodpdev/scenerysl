@@ -10,6 +10,7 @@ import cardfondo from './images/yate4.jpg'
 import LogoIg from './components/LogoIg'
 import LogoWa from './components/LogoWa'
 import GaleriaConClick from './components/GaleriaCine/GaleriaConClick'
+import AnimacionInicial from './components/AnimacionInicial'
 
 function App() {
   
@@ -24,6 +25,8 @@ function App() {
         <Logocamara />
         <Navbar/>
       </div>
+
+      <AnimacionInicial/>
 
       <div className='fondo'>
         <Fondo/>
